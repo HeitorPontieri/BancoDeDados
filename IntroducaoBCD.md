@@ -16,6 +16,6 @@
     
 * Tipo de banco de dados
 
-    - Relacional : Preza muito pela organização, facilita achar os dados dentro do banco de dados, funciona como um grande guarda-roupa, onde cada tipo de camisas são colocados em gavetas diferentes
+    - Relacional : Preza muito pela organização, facilita achar os dados dentro do banco de dados, funciona como um grande guarda-roupa, onde cada tipo de camisas são colocados em gavetas diferentes, por priorizar a organização, o desempenho dos relacionais não é tão bom
     
-    - Não-Relacional : Todo tipo de dado vai pro mesmo lugar, sem muita distinção entre os dados, um grande baú pra guardar esses dados
+    - Não-Relacional : Todo tipo de dado vai pro mesmo lugar, sem muita distinção entre os dados, um grande baú pra guardar esses dados, mais rápido já que não precisa de organização
