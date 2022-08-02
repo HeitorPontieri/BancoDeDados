@@ -1,5 +1,5 @@
  # SGBD
-   |> Sistema Gerenciador de Banco de Dados
+    |> Sistema Gerenciador de Banco de Dados
         |> Gerencia o acesso e a manutenção dos dados arrmazenados 
             |> Tudo passa pelo SGBD
                 |> Salva os dados no HD, ligam dados e metadados, encripta dados, ccontrola o acesso, faz um backup caso os dados sejam danificados
@@ -25,7 +25,7 @@
         - Segurançaa
             |> Segurança de acesso(usuários e aplicações)
             |> Segurança conta falhas (recovery)
-            |> Monitoramento de transações, categorias de falhas, manutenção de hi    stórico de atualizações (logs) e backups do BD
+            |> Monitoramento de transações, categorias de falhas, manutenção de histórico de atualizações (logs) e backups do BD
         
         - Controle de Redundância 
             |> Não deve haver uma duplicação nos dados, guardar informações repetidas
@@ -50,3 +50,38 @@
         - Precisão no resultao da informação
         - Maior disponiilidade dos dados
         - Tempo de desenvolvimento reduzido do software
+
+# Modelagem
+    |> Modelagem é uma forma de obtermos resultados e esquemas puramente conceituais sobre a essência de um sistema, projeto de negócio que se esta desenvolvendo.
+
+
+
+# MER 
+    |> Modelo Entidade de Relacionamentos ( Modelo Conceitual)
+        |> Representação gráfica com um levantamento junto ao cliente 
+            |> Entidades -> um objeto que existe no mundo real com uma identificação distinta e com um significado próprio
+                |> É uma representação de uma classe de dados do negócio, ou seja, um conjunto de informações
+                    |> Na hora da modelagem, as entidades são representadas por um retângulo com seu nome dentro
+            |> Instâncias
+                |> É uma linha de uma tabela e cada tabela é uma entidade e nela existem linhas com dados diferentes
+            |> Atributos Simples
+                |> Todo objeto para ser uma entidade possui propridades que são descritas por atriutos e valores. A junção desses atributos e valores descrevem o conceito de uma instância
+                |> É representado por uma bolinha
+
+                valor = conteúdo de um atributo
+                
+                atributos + atriubtos = instância
+            
+            |> Atributos Identificador
+                |> Identifica e marca qual atributo vai diferenciar a instâncias dentro da entidade,costuma ser um atributo único(que não possa ter um valor igual) dentro de todas as instâncias
+                    |> Criar um Id para ser o identificador, só existe uym por entidade e vai identificar uma instância 
+            |> Atriutos Compostos
+                |> São atributos que podem ser divididos em outros atributos, um exemplo é o endereço que para estar completo, precisa de rua, número, complemento, bairro, cep, cidade 
+                |> São representados por uma bolinha que saem novos atributos
+            |> Atributo Multivalorado
+                |> Pode ter mais de um valor
+                |> O atributo multivalorado pode ser também um atributo composto, ou o multivalorado ser um dos filhos do atriuto composto
+
+
+# Exemplo das entidades com seus modelos
+![](./modelo.png)
