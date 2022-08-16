@@ -59,12 +59,12 @@
 # MER 
     |> Modelo Entidade de Relacionamentos ( Modelo Conceitual)
         |> Representação gráfica com um levantamento junto ao cliente 
-            |> Entidades -> um objeto que existe no mundo real com uma identificação distinta e com um significado próprio
+            - Entidades -> um objeto que existe no mundo real com uma identificação distinta e com um significado próprio
                 |> É uma representação de uma classe de dados do negócio, ou seja, um conjunto de informações
                     |> Na hora da modelagem, as entidades são representadas por um retângulo com seu nome dentro
-            |> Instâncias
+            - Instâncias
                 |> É uma linha de uma tabela e cada tabela é uma entidade e nela existem linhas com dados diferentes
-            |> Atributos Simples
+            - Atributos Simples
                 |> Todo objeto para ser uma entidade possui propridades que são descritas por atriutos e valores. A junção desses atributos e valores descrevem o conceito de uma instância
                 |> É representado por uma bolinha
 
@@ -72,16 +72,71 @@
                 
                 atributos + atriubtos = instância
             
-            |> Atributos Identificador
+            - Atributos Identificador
                 |> Identifica e marca qual atributo vai diferenciar a instâncias dentro da entidade,costuma ser um atributo único(que não possa ter um valor igual) dentro de todas as instâncias
                     |> Criar um Id para ser o identificador, só existe uym por entidade e vai identificar uma instância 
-            |> Atriutos Compostos
+            - Atriutos Compostos
                 |> São atributos que podem ser divididos em outros atributos, um exemplo é o endereço que para estar completo, precisa de rua, número, complemento, bairro, cep, cidade 
                 |> São representados por uma bolinha que saem novos atributos
-            |> Atributo Multivalorado
+            - Atributo Multivalorado
                 |> Pode ter mais de um valor
                 |> O atributo multivalorado pode ser também um atributo composto, ou o multivalorado ser um dos filhos do atriuto composto
 
 
 # Exemplo das entidades com seus modelos
 ![](./modelo.png)
+
+# Relacionamento entre Entidades
+    |> E representado por um losangulo
+
+- Relacionamento de "um-para-um""
+    |> Neste grau cada elemento de uma entidade relaciona-se com *SOMENTE UM ELEMENTO* de outra entidade
+                
+                        1                              1
+  1)    Ent 1 ---------------> *Losangulo* ----------------> Ent 2
+
+
+                                        (1,1)                           (1,1)       -------->  (mínimo, máximo)
+  2) Tipo de Cardinalidade     Ent 1 ---------------> *Losangulo* ----------------> Ent 2
+
+
+                                                 
+  3)  Tipo Pé de Galinha     Ent 1 ----||----------------------||----- Ent 2 -----> | = o minimo que eles podem se relacionar e o máximo que eles podem se relacionar
+
+
+- Relacionamento de "um-para-muitos""
+    |> Este grau de relacionamento é um dos mais comuns no mundo real, sendo o que denominamos de ralacionamento básico entre entidades,onde um item de uma entidade pode se relacionar com vários itens de outra entidade
+        |> Um elemento da entidade A relaciona-se com muiitos elementos da entidade B, mas cada elemento da entidade B somente pode estar relacionado a um elemento da entidade A
+
+
+            1                      N                        N = o numero de elementos necessários
+1)  Ent 1 -------> *Losangulo* -------> Ent 2
+
+
+            (1,1)               (1,N)
+2) Ent 1 -------> *Losangulo* -------> Ent 2
+
+3)  Ent 1 --||----------|<-- Ent 2
+
+- Relacionamento de "muitos-para-muitos""
+    |> Um elemento da entidade A relaciona-se com muitos elementos da entidade B, mas cada elemento da entidade B pode estar relacionado a muitos elementos da entidade A
+
+            N                     N
+1) Ent 1 -------> *Losangulo* -------> Ent 2
+
+            (N,1)               (1,N)
+2) Ent 1 -------> *Losangulo* -------> Ent 2
+
+
+3) Ent 1 ->|--------------|<- Ent 2
+
+
+
+# Cardinalidade
+
+    Mínimo
+    0 ou 1  
+
+    Máximo
+    1 ou N
+     
